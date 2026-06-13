@@ -1,0 +1,62 @@
+{
+  "name": "zentag_backend",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "kill:5000": "kill-port 5000",
+    "worker:email": "node src/services/emailWorker.js",
+    "migrate:users-to-org": "node scripts/migrate-existing-users-to-org.js",
+    "migrate:users-to-org:reset": "RESET_ORGS=1 node scripts/migrate-existing-users-to-org.js",
+    "migrate:attach-data-to-org": "node scripts/attach-data-to-org.js",
+    "script:backfill-clip-highlight-org": "node scripts/backfill-clip-highlight-organization.js",
+    "script:set-superadmin-no-org": "node scripts/set-superadmin-no-org.js",
+    "script:backfill-match-metadata": "node scripts/backfill-match-metadata-from-dsg.js"
+  },
+  "keywords": [
+    "zentag",
+    "video",
+    "api",
+    "express",
+    "mongodb"
+  ],
+  "author": "Shailendra Zentag",
+  "license": "ISC",
+  "description": "Zentag video management backend API",
+  "dependencies": {
+    "@google-cloud/storage": "^7.16.0",
+    "@sendgrid/mail": "^8.1.1",
+    "axios": "^1.11.0",
+    "bcrypt": "^5.1.1",
+    "bullmq": "^5.8.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "express-validator": "^7.2.0",
+    "form-data": "^4.0.5",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mongoose": "^8.16.1",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.2",
+    "multer-s3": "^3.0.1",
+    "nodemailer": "^7.0.12",
+    "redis": "^5.10.0",
+    "redis-adapter": "^0.1.0",
+    "sequelize": "^6.37.7",
+    "shortid": "^2.2.17",
+    "socket.io": "^4.8.3",
+    "uuid": "^10.0.0",
+    "winston": "^3.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

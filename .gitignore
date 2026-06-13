@@ -1,0 +1,16 @@
+/node_modules
+/build
+.env
+/.env.test
+/logs
+test-api.js
+test-auth.js
+env_config/*.json
+
+env_config/*.json*
+
+# build output
+dist/
+build/
+*.tsbuildinfo
+.env

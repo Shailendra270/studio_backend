@@ -81,7 +81,7 @@ const allowedOrigins = [
   'https://zentag.ai',
   'https://zentag-ai-dev.vercel.app',
   'http://35.200.219.105',
-  'http://34.14.198.134',
+  'http://3.26.94.215',
   'http://34.14.203.238',
   'http://localhost:8080',
   'http://localhost:5173',

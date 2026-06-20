@@ -67,8 +67,7 @@ const gracefulShutdown = (signal) => {
 
 process.on("SIGTERM", () => gracefulShutdown("SIGTERM"));
 process.on("SIGINT", () => gracefulShutdown("SIGINT"));
-// src/server.js
-console.log("Deploy Test");
+
 // Start server
 const startServer = async () => {
   try {

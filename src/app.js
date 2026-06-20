@@ -87,6 +87,7 @@ const allowedOrigins = [
   process.env.FRONTEND_URL,
 ].filter(Boolean);
 
+
 // app.use(
 //   cors({
 //     origin: (origin, callback) => callback(null, origin || "*"),
